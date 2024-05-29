@@ -1,0 +1,13 @@
+/* src/Rightbar.css */
+.rightbar {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-left: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}

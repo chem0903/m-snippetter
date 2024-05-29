@@ -1,0 +1,109 @@
+/* src/Snippet.css */
+.snippet-item {
+  background-color: #e8eaf6;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.snippet-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.snippet-info {
+  flex: 1;
+}
+
+.snippet-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 30px; /* 画像を右端に配置 */
+}
+
+.snippet-author img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+  border: 2px solid #e8eaf6; /* 画像に境界を追加して際立たせる */
+  background-color: white; /* 画像の背景を白にして際立たせる */
+}
+
+.snippet-author p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+  white-space: nowrap; /* テキストを折り返さないようにする */
+}
+
+.snippet-item h2 {
+  margin: 0 0 5px 0; /* 間隔を狭くする */
+  font-size: 1.5em;
+}
+
+.snippet-item p {
+  margin: 5px 0; /* 間隔を狭くする */
+  font-size: 1.2em;
+  color: #333;
+}
+
+.snippet-item pre {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 1.1em;
+}
+
+.snippet-interactions {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.snippet-interactions p {
+  margin: 0 10px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.snippet-interactions svg {
+  cursor: pointer;
+}
+
+.snippet-comments {
+  margin-top: 10px;
+}
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comment-form button {
+  display: none;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  outline: none;
+}
+
+.snippet-title {
+  display: flex;
+}
+
+.snippet-title p {
+  margin-left: 10px;
+}

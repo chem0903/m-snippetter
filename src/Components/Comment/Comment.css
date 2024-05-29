@@ -1,0 +1,22 @@
+/* src/Comment.css */
+.snippet-comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.commenter-img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.snippet-comment p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.comment-time {
+  padding-left: 15px;
+}

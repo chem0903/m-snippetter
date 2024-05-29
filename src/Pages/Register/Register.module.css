@@ -1,0 +1,93 @@
+/* src/Login.module.css */
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+}
+
+.title {
+  font-size: 3rem; /* フォントサイズを大きく */
+  color: #09ad25; /* 緑系の色に変更 */
+  margin-bottom: 20px; /* 下に余白を追加 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 軽い影を追加 */
+  font-family: "Arial", sans-serif; /* フォントを指定 */
+  letter-spacing: 2px; /* 文字間のスペースを広く */
+}
+
+.loginBox {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+  padding: 40px;
+  background: #00ea27; /* 背景色を薄い緑に変更 */
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.loginBox h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+}
+
+.userBox {
+  position: relative;
+}
+
+.userBox input {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff; /* 緑のボーダーに変更 */
+  background: transparent;
+  outline: none;
+  color: #fff; /* 緑のテキストに変更 */
+  font-size: 16px;
+}
+
+.userBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #fff; /* 緑のラベルに変更 */
+}
+
+.userBox input:focus ~ label,
+.userBox input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff; /* 薄い緑のラベルに変更 */
+  font-size: 12px;
+}
+
+.loginButton {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #078345; /* 緑の背景色に変更 */
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+.loginButton:hover {
+  background: #32cd32; /* 濃い緑の背景色に変更 */
+}
+
+.error {
+  color: #ff4d4f; /* エラーメッセージの色を赤に設定 */
+  font-size: 0.875rem;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  display: block;
+}
