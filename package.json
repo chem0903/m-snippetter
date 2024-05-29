@@ -31,7 +31,7 @@
     "eject": "react-scripts eject",
     "docs": "npm run build && mv build docs"
   },
-  "homepage": "/m-snippetter-in-frontend",
+  "homepage": "https://chem0903.github.io/m-snippetter-in-frontend/",
   "eslintConfig": {
     "extends": [
       "react-app",
