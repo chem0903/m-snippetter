@@ -56,6 +56,7 @@ const Info = ({ profileUser }) => {
       name: name,
     };
     await axios.put(ORIGIN_API + "/users/edit/name", reqBody);
+    window.location.reload();
   };
 
   const editEmail = async () => {
@@ -65,6 +66,7 @@ const Info = ({ profileUser }) => {
       email: email,
     };
     await axios.put(ORIGIN_API + "/users/edit/email", reqBody);
+    window.location.reload();
   };
 
   const editBio = async () => {
@@ -78,6 +80,7 @@ const Info = ({ profileUser }) => {
       },
     };
     await axios.put(ORIGIN_API + "/users/edit/bio", reqBody);
+    window.location.reload();
   };
 
   const editLanguages = async () => {
@@ -91,6 +94,7 @@ const Info = ({ profileUser }) => {
       },
     };
     await axios.put(ORIGIN_API + "/users/edit/languages", reqBody);
+    window.location.reload();
   };
 
   const editComment = async () => {
@@ -104,6 +108,7 @@ const Info = ({ profileUser }) => {
       },
     };
     await axios.put(ORIGIN_API + "/users/edit/comment", reqBody);
+    window.location.reload();
   };
 
   return (
