@@ -27,7 +27,11 @@ const Profile = () => {
 
   const fetchSnippets = async () => {
     const res = await axios.get(ORIGIN_API + "/posts/all");
-    setAllSnippets(res.data);
+    setAllSnippets(
+      res.data.sort((post1, post2) => {
+        return new Date(post2.createdAt) - new Date(post1.createdAt);
+      })
+    );
   };
 
   const profileUserSnippets = allSnippets.filter(
