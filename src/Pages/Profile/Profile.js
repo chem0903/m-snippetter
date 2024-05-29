@@ -43,23 +43,21 @@ const Profile = () => {
     else return false;
   };
 
-  // ! バグ：出現条件：フォローした状態でリロードをかけるとなぜか、authUserのfollowingsのidがfollowersに移動している。
-  // console.log(authUser);
-  // console.log(profileUser);
-  // console.log(isFollowing());
-
   const toggleFollow = async () => {
     const reqBody = {
       authId: authUser._id,
     };
     await axios.put(ORIGIN_API + `/users/${profileUserId}/follow`, reqBody);
-    fetchAuthUser();
+    const newestAuthUser = await fetchAuthUser();
+    console.log(newestAuthUser);
+    localStorage.setItem("user", JSON.stringify(newestAuthUser));
     fetchAllUser();
   };
 
   const fetchAuthUser = async () => {
     const res = await axios.get(ORIGIN_API + `/users/${authUser._id}`);
     setAuthUser(res.data);
+    return res.data;
   };
 
   const fetchAllUser = async () => {

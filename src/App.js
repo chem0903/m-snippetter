@@ -14,6 +14,8 @@ import Register from "./Pages/Register/Register";
 
 const App = () => {
   const authUser = JSON.parse(localStorage.getItem("user"));
+  // basename="/m-snippetter-in-frontend"
+  // https://chem0903.github.io/m-snippetter-in-frontend
 
   return (
     <Router basename="/m-snippetter-in-frontend">

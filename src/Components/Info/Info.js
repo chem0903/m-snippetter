@@ -49,7 +49,9 @@ const Info = ({ profileUser }) => {
     setIsEditComment(!isEditComment);
   };
 
-  const editName = async () => {
+  const editName = async (e) => {
+    e.preventDefault();
+
     if (!name) return;
     const reqBody = {
       authId: authUser._id,
@@ -59,7 +61,9 @@ const Info = ({ profileUser }) => {
     window.location.reload();
   };
 
-  const editEmail = async () => {
+  const editEmail = async (e) => {
+    e.preventDefault();
+
     if (!email) return;
     const reqBody = {
       authId: authUser._id,
@@ -69,7 +73,9 @@ const Info = ({ profileUser }) => {
     window.location.reload();
   };
 
-  const editBio = async () => {
+  const editBio = async (e) => {
+    e.preventDefault();
+
     if (!bio) return;
     const reqBody = {
       authId: authUser._id,
@@ -83,7 +89,8 @@ const Info = ({ profileUser }) => {
     window.location.reload();
   };
 
-  const editLanguages = async () => {
+  const editLanguages = async (e) => {
+    e.preventDefault();
     if (!languages) return;
     const reqBody = {
       authId: authUser._id,
@@ -97,7 +104,8 @@ const Info = ({ profileUser }) => {
     window.location.reload();
   };
 
-  const editComment = async () => {
+  const editComment = async (e) => {
+    e.preventDefault();
     if (!comment) return;
     const reqBody = {
       authId: authUser._id,
@@ -114,7 +122,7 @@ const Info = ({ profileUser }) => {
   return (
     <>
       <div className="profile-info-container">
-        <form className="profile-info-item" onSubmit={editName}>
+        <form className="profile-info-item" onSubmit={(e) => editName(e)}>
           <h2>Name:</h2>
           {isEditName ? (
             <input value={name} onChange={(e) => setName(e.target.value)} />
@@ -125,7 +133,7 @@ const Info = ({ profileUser }) => {
             <EditIcon onClick={toggleEditName} className="edit-icon" />
           )}
         </form>
-        <form className="profile-info-item" onSubmit={editEmail}>
+        <form className="profile-info-item" onSubmit={(e) => editEmail(e)}>
           <h2>Email:</h2>
           {isEditMail ? (
             <input
@@ -141,7 +149,7 @@ const Info = ({ profileUser }) => {
             <EditIcon onClick={toggleEditMail} className="edit-icon" />
           )}
         </form>
-        <form className="profile-info-item" onSubmit={editBio}>
+        <form className="profile-info-item" onSubmit={(e) => editBio(e)}>
           <h2>Bio:</h2>
           {isEditBio ? (
             <input value={bio} onChange={(e) => setBio(e.target.value)} />
@@ -152,7 +160,7 @@ const Info = ({ profileUser }) => {
             <EditIcon onClick={toggleEditBio} className="edit-icon" />
           )}
         </form>
-        <form className="profile-info-item" onSubmit={editLanguages}>
+        <form className="profile-info-item" onSubmit={(e) => editLanguages(e)}>
           <h2>Languages:</h2>
           {isEditLanguages ? (
             <input
@@ -166,7 +174,7 @@ const Info = ({ profileUser }) => {
             <EditIcon onClick={toggleEditLanguages} className="edit-icon" />
           )}
         </form>
-        <form className="profile-info-item" onSubmit={editComment}>
+        <form className="profile-info-item" onSubmit={(e) => editComment(e)}>
           {isEditComment ? (
             <input
               value={comment}

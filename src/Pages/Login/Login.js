@@ -12,6 +12,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
+  // ! ちょっとしたバグあり
+
   const handleLogin = async (e) => {
     e.preventDefault();
     const newErrors = {};
