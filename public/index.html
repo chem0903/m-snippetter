@@ -41,11 +41,14 @@
       
     -->
     <script type="text/javascript">
-      // sessionStorage.redirectに保存されたURLにリダイレクト
-      if (sessionStorage.redirect) {
+      // リダイレクトフラグをチェック
+      if (sessionStorage.getItem("redirected") === "true") {
+        // リダイレクトフラグが設定されている場合
         var redirectUrl = sessionStorage.redirect;
         // sessionStorage.redirectをクリアする
         sessionStorage.removeItem("redirect");
+        // リダイレクトフラグをクリアする
+        sessionStorage.removeItem("redirected");
         // 元のURLにリダイレクト
         window.location.href = redirectUrl;
       }
