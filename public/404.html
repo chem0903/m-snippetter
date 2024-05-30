@@ -2,21 +2,14 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      http-equiv="refresh"
-      content="5;url=https://chem0903.github.io/m-snippetter-in-frontend/index.html"
-    />
     <title>404 Not Found</title>
   </head>
   <body>
-    <h1>404 - ページが見つかりません</h1>
-    <p>5秒後にホームページにリダイレクトします。</p>
-
+    元のページにリダイレクトします。
     <script type="text/javascript">
-      setTimeout(function () {
-        window.location.href =
-          "https://chem0903.github.io/m-snippetter-in-frontend/index.html";
-      }, 5000); // 5秒後にリダイレクト
+      sessionStorage.redirect = location.href;
+      window.location.href =
+        "https://chem0903.github.io/m-snippetter-in-frontend/index.html";
     </script>
   </body>
 </html>

@@ -40,5 +40,15 @@
       To create a production bundle, use `npm run build` or `yarn build`.
       
     -->
+    <script type="text/javascript">
+      // sessionStorage.redirectに保存されたURLにリダイレクト
+      if (sessionStorage.redirect) {
+        var redirectUrl = sessionStorage.redirect;
+        // sessionStorage.redirectをクリアする
+        sessionStorage.removeItem("redirect");
+        // 元のURLにリダイレクト
+        window.location.href = redirectUrl;
+      }
+    </script>
   </body>
 </html>
