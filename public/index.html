@@ -40,18 +40,12 @@
       To create a production bundle, use `npm run build` or `yarn build`.
       
     -->
-    <script type="text/javascript">
-      // リダイレクトフラグをチェック
-      if (sessionStorage.getItem("redirected") === "true") {
-        // リダイレクトフラグが設定されている場合
-        var redirectUrl = sessionStorage.redirect;
-        // sessionStorage.redirectをクリアする
-        sessionStorage.removeItem("redirect");
-        // リダイレクトフラグをクリアする
-        sessionStorage.removeItem("redirected");
-        // 元のURLにリダイレクト
-        window.location.href = redirectUrl;
+    <!-- <script>
+      const path = sessionStorage.getItem("path");
+      if (path && path === "/react-from-meta-lang/other") {
+        sessionStorage.removeItem("path");
+        window.history.replaceState(null, null, "./other");
       }
-    </script>
+    </script> -->
   </body>
 </html>

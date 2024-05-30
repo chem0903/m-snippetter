@@ -6,14 +6,9 @@
   </head>
   <body>
     元のページにリダイレクトします。
-    <script type="text/javascript">
-      // 現在のURLをsessionStorageに保存
-      sessionStorage.redirect = location.href;
-      // リダイレクトフラグを設定
-      sessionStorage.setItem("redirected", "true");
-      // 指定のURLにリダイレクト
-      window.location.href =
-        "https://chem0903.github.io/m-snippetter-in-frontend/index.html";
+    <script>
+      sessionStorage.setItem("path", location.pathname);
+      location.replace("./");
     </script>
   </body>
 </html>
