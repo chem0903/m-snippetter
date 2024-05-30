@@ -40,12 +40,12 @@
       To create a production bundle, use `npm run build` or `yarn build`.
       
     -->
-    <!-- <script>
+    <script>
       const path = sessionStorage.getItem("path");
-      if (path && path === "/react-from-meta-lang/other") {
+      if (path) {
         sessionStorage.removeItem("path");
-        window.history.replaceState(null, null, "./other");
+        window.history.replaceState(null, null, path);
       }
-    </script> -->
+    </script>
   </body>
 </html>
