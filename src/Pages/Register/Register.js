@@ -40,6 +40,7 @@ const Register = () => {
       const allUsers = fetchAllUsers();
       setAllUsers(allUsers);
       navigate("/login");
+      window.location.reload();
     }
   };
 
