@@ -16,7 +16,7 @@ const REPO_API = process.env.REACT_APP_REPO_API;
 
 const App = () => {
   const authUser = JSON.parse(localStorage.getItem("user"));
-  // https://chem0903.github.io/m-snippetter-in-frontend
+  // https://chem0903.github.io/m-snippetter
 
   return (
     <Router basename={REPO_API}>

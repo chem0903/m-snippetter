@@ -13,7 +13,7 @@ import "codemirror/mode/go/go";
 import "codemirror/mode/sql/sql";
 import "codemirror/mode/markdown/markdown";
 import "codemirror/mode/shell/shell";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../../Contexts/AuthUserContext";
 import axios from "axios";
 
@@ -33,7 +33,10 @@ const Post = () => {
     setLanguage(event.target.value);
   };
 
+  const navigate = useNavigate("/");
+
   const handlePost = async (e) => {
+    e.preventDefault(e);
     const newPost = {
       title: title.current.value,
       language: language,
@@ -44,6 +47,7 @@ const Post = () => {
     };
 
     await axios.post(ORIGIN_API + "/posts/new", newPost);
+    navigate("/");
   };
 
   return (
@@ -132,7 +136,7 @@ const Post = () => {
         </div>
         <div className="form-group full-width">
           <button type="submit" className="submit-button">
-            Submit
+            Share
           </button>
         </div>
       </form>

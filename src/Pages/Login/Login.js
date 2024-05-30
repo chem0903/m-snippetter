@@ -86,7 +86,9 @@ const Login = () => {
               <label>Password</label>
               <span className={styles.error}>{errors.password}</span>
             </div>
-            <button type="submit" style={{ display: "none" }}></button>
+            <button type="submit" className={styles.btn}>
+              ログイン
+            </button>
           </form>
           <Link to="/register">
             <button className={styles.loginButton}>新規登録はこちらから</button>

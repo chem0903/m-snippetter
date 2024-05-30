@@ -73,14 +73,36 @@
   border: none;
   outline: none;
   color: #fff;
+  background: #04a856; /* 緑の背景色に変更 */
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.5s;
+  float: right;
+  position: relative;
+  right: 25px;
+}
+
+.loginButton:hover {
+  background: #32cd32; /* 濃い緑の背景色に変更 */
+}
+
+.btn {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
   background: #078345; /* 緑の背景色に変更 */
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.5s;
+  float: left;
+  position: relative;
+  left: 25px;
 }
 
-.loginButton:hover {
+.btn:hover {
   background: #32cd32; /* 濃い緑の背景色に変更 */
 }
 

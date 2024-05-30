@@ -103,12 +103,12 @@ const Register = () => {
                 <span className={styles.error}>{errors.confirmPassword}</span>
               )}
             </div>
-            <button type="submit" style={{ display: "none" }}></button>
+            <button type="submit" className={styles.btn}>
+              新規登録
+            </button>
           </form>
           <Link to="/login">
-            <button className={styles.loginButton}>
-              すでにアカウントをお持ちの方はこちらから
-            </button>
+            <button className={styles.loginButton}>ログインはこちらから</button>
           </Link>
         </div>
       </div>
