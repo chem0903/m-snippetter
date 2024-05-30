@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/m-snippetter-in-frontend/static/css/main.00190da8.css",
-    "main.js": "/m-snippetter-in-frontend/static/js/main.144b5493.js",
+    "main.js": "/m-snippetter-in-frontend/static/js/main.74ce41c9.js",
     "index.html": "/m-snippetter-in-frontend/index.html",
     "main.00190da8.css.map": "/m-snippetter-in-frontend/static/css/main.00190da8.css.map",
-    "main.144b5493.js.map": "/m-snippetter-in-frontend/static/js/main.144b5493.js.map"
+    "main.74ce41c9.js.map": "/m-snippetter-in-frontend/static/js/main.74ce41c9.js.map"
   },
   "entrypoints": [
     "static/css/main.00190da8.css",
-    "static/js/main.144b5493.js"
+    "static/js/main.74ce41c9.js"
   ]
 }

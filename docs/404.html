@@ -7,8 +7,10 @@
   <body>
     元のページにリダイレクトします。
     <script>
+      const REPO_API = process.env.REACT_APP_REPO_API;
+
       sessionStorage.setItem("path", location.pathname);
-      location.replace("/index.html");
+      location.replace(REPO_API + "/index.html");
     </script>
   </body>
 </html>

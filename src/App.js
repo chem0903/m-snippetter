@@ -12,13 +12,14 @@ import Profile from "./Pages/Profile/Profile";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 
+const REPO_API = process.env.REACT_APP_REPO_API;
+
 const App = () => {
   const authUser = JSON.parse(localStorage.getItem("user"));
-  // basename="/m-snippetter-in-frontend"
   // https://chem0903.github.io/m-snippetter-in-frontend
 
   return (
-    <Router basename="/m-snippetter-in-frontend">
+    <Router basename={REPO_API}>
       <Routes>
         <Route path="*" element={authUser ? <Home /> : <Login />} />
         <Route
